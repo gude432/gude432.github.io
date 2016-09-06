@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+ 	<html>
+		<head>
+			<title>touch drawing</title>
+			<meta name="viewport" content="width=device-width; user-scalable=0; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0" />
+			<script src="js/jquery-1.8.2.min.js"> </script>
+		
+		  <style>
+		   body {
+		   text-align: center;
+		   margin: auto;
+		   } 
+		   .rahmen {
+		    border: solid 1px #000000;
+		   }
+		   button {
+		     margin-top: 3px;
+		     margin-bottom: 5px;
+		   }
+		   .buttonclass {
+		     border-radius: 5px;
+		     height:46px;
+         width:46px;
+         border:2px solid #777;
+         margin-right: 5px;
+		   }
+		   .red{
+        background-color:#c22;
+        }
+        .blue{
+        background-color:#22c;
+        }
+        .green{
+        background-color:#2c2;
+        }
+
+		  </style>
+		</head>
+		
+		<body>
+		  <input type="file" id="snap" accept="image/*;capture=camera" >
+		  
+		  <button onclick="rotating()">show pic</button>
+      
+      <canvas width="300" height="370" id="canvas" class="rahmen"></canvas>
+      
+      <button onclick="blue_color()" class="buttonclass blue">b</button>
+      <button onclick="green_color()" class="buttonclass green">g</button>
+      <button onclick="red_color()" class="buttonclass red">r</button>
+      
+      <button onclick="brushplus()" class="buttonclass">+</button>
+      <button onclick="brushminus()" class="buttonclass">-</button>
+      
+      <img id="scream" src="coke.png" width="400" height="400" style="display:none">
+      <img src="about:blank" id="showPhoto" width="300" height="370" > 
+      
+			<script>
+						  
+	        var canvasE1 = document.getElementById('canvas');
+	        var canvas = canvasE1.getContext('2d');
+	        var brushsize = 5;
+	      
+          canvas.strokeStyle = "#FF0000";
+          canvas.lineWidth = brushsize;
+                    
+          var StartTouch = function(event){
+            event.preventDefault();
+            canvas.beginPath();
+            };
+          
+          var MoveTouch = function(event){
+            event.preventDefault();
+            canvas.lineTo(event.touches[0].pageX,event.touches[0].pageY-15);
+            canvas.stroke();
+            };
+            
+          var EndTouch = function(event){
+             event.preventDefault();
+             var img= document.getElementById("scream");
+             canvas.drawImage(img,220,290,60,60);
+             };
+              
+
+          var img= document.getElementById("showPhoto");
+	        var snap = document.getElementById("snap");
+          snap.onchange=function(e){ 
+             var file=e.target.files[0];
+             var URL=window.URL|| window.webkitURL; 
+             var fileURL=URL.createObjectURL(file); 
+             img.src=fileURL; 
+             URL.revokeObjectURL(fileURL);
+             };
+                
+          function rotating(){
+              canvas.save();
+              canvas.translate(canvasE1.width,0);
+              canvas.rotate(90*Math.PI/180);
+              canvas.drawImage(img,-150,0, 650, 800);
+              canvas.restore();
+          }
+             
+          function red_color(){
+              canvas.strokeStyle = "#FF0000";
+              }
+                          
+          function green_color(){
+              canvas.strokeStyle = "#00FF00";
+              }
+              
+          function blue_color(){
+              canvas.strokeStyle = "#0000FF";
+                }
+          
+          function brushplus(){
+              brushsize++;
+              brushsize++;
+              canvas.lineWidth = brushsize;
+                }
+                
+          function brushminus(){
+              brushsize--;
+              brushsize--;
+              canvas.lineWidth = brushsize;
+                }
+          
+	        canvasE1.addEventListener("touchstart" , StartTouch, false);
+	        canvasE1.addEventListener("touchmove" , MoveTouch , false);
+	        canvasE1.addEventListener("touchend" , EndTouch , false);
+
+			</script>			
+		</body>
+	</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

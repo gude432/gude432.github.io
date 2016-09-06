@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ 	<html>
+		<head>
+			<meta name="viewport" content="width=device-width; user-scalable=no; initial-scale=1.0; maximum-scale=1.0;"/>
+				<script src="jquery-1.7.1.min.js"> </script>
+				<meta name="apple-mobile-web-capable" content="yes" />
+			  <link rel="icon" sizes="196x196" href="nice-highres.png">
+			  <link rel="apple-touch-icon" href="icon-iphone.png"/>
+		</head>
+
+		<body>
+			<audio id="btn_snd1" src="button1.mp3"></audio>
+			<audio id="btn_snd2" src="button2.mp3"></audio>
+			<audio id="btn_snd3" src="button3.mp3"></audio>
+			<audio id="btn_snd4" src="button4.mp3"></audio>
+			<audio id="btn_snd5" src="button5.mp3"></audio>
+			<audio id="btn_snd6" src="button6.mp3"></audio>
+			<audio id="btn_snd7" src="button7.mp3"></audio>
+			<audio id="btn_snd8" src="button8.mp3"></audio>	
+			<div id="wrap">
+				<button id="btn1" class="btn" onclick="play(1)">photo1</button>
+				<button id="btn2" class="btn" onclick="play(2)">photo2</button>		
+				<button id="btn3" class="btn" onclick="play(3)">photo3</button>
+				<button id="btn4" class="btn" onclick="play(4)">photo4</button>		
+				<button id="btn5" class="btn" onclick="play(5)">photo5</button>
+				<button id="btn6" class="btn" onclick="play(6)">photo6</button>		
+				<button id="btn7" class="btn" onclick="play(7)">photo7</button>
+				<button id="btn8" class="btn" onclick="play(8)">photo8</button>				
+			</div>
+			<img id="img1" class="img" src="img1.jpg" width="100%">
+			<img id="img2" class="img" src="img2.jpg" width="100%">
+			<img id="img3" class="img"  src="img3.jpg" width="100%">
+			<img id="img4" class="img"  src="img4.jpg" width="100%">
+			<img id="img5" class="img"  src="img5.jpg" width="100%">
+			<img id="img6" class="img"  src="img6.jpg" width="100%">
+			<img id="img7" class="img"  src="img7.jpg" width="100%">
+			<img id="img8" class="img"  src="img8.jpg" width="100%">			
+		</body>
+		
+		<style>
+		html{
+			height:100%;	
+			}
+		body{
+			text-align:center; 
+			background-color:black;
+			height:100%;
+			}
+		button {
+			font-size:20px; 
+			border-radius:15px; 
+			padding-bottom:35px; 
+			padding-top:35px; 
+			padding-left:10px;
+			padding-right:10px;
+			width:45%;		
+			}
+		#wrap{ position:absolute; top:80px; bottom:100px;}				
+		#btn1 {background-color:#CC9900}
+		#btn2 {background-color:#FF66FF}
+		#btn3 {background-color:#00FFCC}
+		#btn4 {background-color:#009933}
+		#btn5 {background-color:red;}
+		#btn6 {background-color:#66CCFF}
+		#btn7 {background-color:#CC66FF}
+		#btn8 {background-color:#FFFF00}
+		</style>
+		
+		<script>
+			$(".img").hide();
+		
+			function play(id){
+			var id = id;
+			var snd = document.getElementById("btn_snd"+id);
+			snd.play();
+			$(".btn").hide(); $("#img"+id).show();
+			$("#img"+id).click(function(){ $("#img"+id).hide();	$(".btn").show();});
+			}			
+
+		</script>
+		
+	</html>
