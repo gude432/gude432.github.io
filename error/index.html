@@ -28,13 +28,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/index.html">Gudeta G</a>
+          <a class="navbar-brand" href="/">Gudeta G</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class=""><a href="/index.html">Home</a></li>
-            <li class=""><a href="/about.html">About</a></li>
-            <li class="active"><a href="/contact.html">Contact</a></li>
+            <li class=""><a href="/">Home</a></li>
+            <li class=""><a href="/about/">About</a></li>
+            <li class=""><a href="/contact/">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -64,8 +64,8 @@
     
 <div class="jumbotron">
   <div class="container">
-    <h1>Make this a contact form!</h1>
-    <p>Give your contact info, or use a SaaS solution to add dynamic contact forms to your static website.</p>
+    <h1>We're sorry!</h1>
+    <p>The page <b id="url"></b> could not be found on this server.</p>
   </div>
 </div>
 
@@ -76,5 +76,18 @@
   </body>
 
   
-  
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+
+      // Add the missing url to the text
+      $("#url").text(window.location.pathname);
+
+      // Fix the css locations dynamically
+      $("head link").each(function() {
+        for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
+          $(this).attr("href", "../" + $(this).attr("href"));
+      });
+    })
+  </script>
+
 </html>
