@@ -1,0 +1,29 @@
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.img {
+    vertical-align: middle;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+
+.frame {
+    border: 1px solid green;        
+    text-align: center; 
+    margin: 1em 0;
+   
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.w3-myfont {
+  font-family: "Arial Black", Gadget, Arial, Helvetica, sans-serif;
+}
