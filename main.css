@@ -12,7 +12,7 @@
 
 
 .frame {
-    border: 1px solid green;        
+    border: 1px solid blue;        
     text-align: center; 
     margin: 1em 0;
    
@@ -26,4 +26,12 @@ ul {
 
 .w3-myfont {
   font-family: "Arial Black", Gadget, Arial, Helvetica, sans-serif;
+}
+
+.cv-cont{
+    padding:8px;
+}
+
+div{
+    
 }
