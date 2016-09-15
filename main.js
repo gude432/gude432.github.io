@@ -1,4 +1,5 @@
 // Tabs
+
 function openGroup(evt, groupName) {
     var i;
     var x = document.getElementsByClassName("group");
@@ -31,7 +32,7 @@ function filterGroup(evt, groupName) {
 
     var activebtn = document.getElementsByClassName("testbtn2");
     for (i = 0; i < x.length + 1; i++) {
-        activebtn[i].className = activebtn[i].className.replace(" w3-theme-d3", "");
+        activebtn[i].className = activebtn[i].className.replace(" w3-theme-d1", "");
     }
     if (groupName != "all") {
         document.getElementById("Name").style.display = "block";
@@ -42,7 +43,7 @@ function filterGroup(evt, groupName) {
             x[i].style.display = "block";
         }
     }
-    evt.currentTarget.className += " w3-theme-d3";
+    evt.currentTarget.className += " w3-theme-d1";
 
 }
 
