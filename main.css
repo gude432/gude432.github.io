@@ -32,6 +32,11 @@ ul {
     padding:8px;
 }
 
-.testbtn2, .testbtn{
+.testbtn2{
+display: inline-block; 
+    
+}
+
+.testbtn{
 display: inline-block; 
 }
