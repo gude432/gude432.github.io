@@ -14,8 +14,8 @@
 <body>
     <noscript>
     <p>Please enable JavaScript for full functionality</p></noscript> 
-    <div class="w3-container " style="padding-bottom:0px; margin-bottom:0px;">        
-        <br>
+    <div class="w3-row " style="padding-bottom:0px; margin-bottom:0px; ">        
+        
         <div class="w3-myfont w3-animate-fade group w3-container w3-text-theme" id="Name" style="max-width:900px; margin:auto; margin-bottom:0px;">
             <h1 class=" w3-xxlarge w3-animate-fade">
             Gudeta G <a class="w3-btn w3-theme-dark w3-right w3-small" href="cv.pdf">Download CV in pdf</a></h1>
@@ -23,63 +23,48 @@
         </div>
 
 
-        <div class="group" id="Home" style="margin-bottom:0px;">
+        <div class="group" id="Home" >
 
-            <div class="w3-row w3-theme" style=
-            "max-width:900px; margin:auto; margin-top:0px;">
-                <div class=" w3-col m3 l2.5 w3-left-align" style="padding:3%;"><br>
+            <div class="w3-row w3-topbar w3-border-theme " style=
+            "max-width:900px; margin:auto; display:block;">
+                <div class=" w3-col w3-left-align" style="width:150px" >
                 
-                <img alt="gudeta_photo" class="img" src="img/gudeta.jpg" style=
+                <img alt="gudeta_photo" class="mypict img" src="img/gudeta.jpg" style=
                 "margin-left:16px;">
                 </div>
 
-
-                <div class="w3-col m4 l4" style="padding:3%; ">
+                <div class="hometext w3-rest" style="min-width:300px">
+                <div id="detailsleft" class="toppad w3-half" >
                     
-                    <h1 class="w3-myfont w3-xxlarge w3-animate-fade">Gudeta G</h1>
-                    <p>Developer and designer</p>
-                    <p>I like to design and implement things. I love coding,
-                    designing and sketching</p>
+                    <h1 class="w3-animate-fade">Gudeta G</h1>
+                    <p id="tagline">Developer and designer</p>
+                    <p>I like to design and implement. My interests include game programming, Data analysis and Web development</p>
                 </div>
-
-
-                <div class="w3-col m5 l4 w3-align-left" style="padding:3%;">
-                    <br>
-                    <br>
-
-
+                <div id="detailsright" class="toppad w3-half">   
                     <table class="">
                         <col width="20%">
                         <col width="80%">
-
                         <tr>
                             <td>Name:</td>
-
                             <td>Gudeta Gebremariam</td>
                         </tr>
-
-
                         <tr>
                             <td>Email:</td>
 
                             <td>g@gudetag.com</td>
                         </tr>
-
-
                         <tr>
                             <td>Web:</td>
 
                             <td>gudetag.com</td>
                         </tr>
-
-
                         <tr>
                             <td>Phone:</td>
-
                             <td>+358 451872505</td>
                         </tr>
                     </table>
 					<a class="w3-btn w3-theme-dark" href="cv.pdf">Download CV in pdf</a>
+                </div>
                 </div>
             </div>
 
@@ -90,10 +75,10 @@
     </div>
 
 
-    <div class="w3-container" style="max-width:900; margin:auto 0px;">
+    <div class="w3-row" style="max-width:900; margin:auto 0px;">
         <div class=" w3-left-align" style="max-width:900px; margin:auto; ">
 		
-			<div class="nav-cont w3-btn-bar w3-left-align w3-theme-dark" style="margin:auto;">
+			<div class="fit nav-cont w3-btn-bar w3-left-align w3-theme-dark" style="margin:auto;">
 			
 						<a class="w3-btn   testbtn" onclick=
                         "openGroup(event, 'Home')">Home</a>  
@@ -406,13 +391,13 @@
 
                
                 
-                 <div class="nav-cont w3-btn-bar  w3-left-align w3-theme-light" style="margin:auto;">
+                 <div class=" w3-btn-bar   w3-theme-light" style="margin:auto;">
 			
-						<a target="_blank" href="mailto:g@gudetag.com" style="width:33.3%" class="w3-btn w3-padding   " ><i class="w3-xxxlarge w3-xxxlarge fa fa-envelope"></i><br>g@gudetag.com</a>  
+						<a target="_blank" href="mailto:g@gudetag.com"  class=" w3-btn w3-padding   " ><i class="w3-xxxlarge w3-xxxlarge fa fa-envelope"></i><br>g@gudetag.com</a>  
 						
-                        <a target="_blank" href="https://www.linkedin.com/in/gudetag" style="width:33.3%" class="w3-btn w3-padding" ><i class="w3-xxxlarge fa fa-linkedin"></i><br>gudetag</a>
+                        <a target="_blank" href="https://www.linkedin.com/in/gudetag"  class=" w3-btn w3-padding" ><i class="w3-xxxlarge fa fa-linkedin"></i><br>gudetag</a>
 						
-                        <a target="_blank" href="https://github.com/gude432" style="width:33.3%" class="w3-btn w3-padding" ><i class="w3-xxxlarge fa fa-github"></i><br>gude432</a>
+                        <a target="_blank" href="https://github.com/gude432"  class=" w3-btn w3-padding" ><i class="w3-xxxlarge fa fa-github"></i><br><span class="fit">gude432</span></a>
                     
                        
                         
@@ -421,14 +406,13 @@
             <!-- Footer -->
 
 
-            <footer class="footer w3-container w3-theme-light w3-text-theme">
-                <p>Gudeta G 2016</p>
+            <footer class="footer w3-container  ">
+                <p>&copy Gudeta Gebremariam 2016</p>
             </footer>
         </div>
     </div>
 
-    <hr>
-    <!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
+        <!-- Script for Sidenav, Tabs, Accordions, Progress bars and slideshows -->
 <script src="main.js"></script>
 </body>
 </html>
